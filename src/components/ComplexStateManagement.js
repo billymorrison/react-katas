@@ -18,7 +18,7 @@ const ComplexStateManagement = () => {
   }, []);
 
   const loopNamesInList = (state) => {
-    return state ? state.map(name => <li key={name}>{name}</li>) : null
+    return state && state.map(name => <li key={name}>{name}</li>)
   }
   
 
