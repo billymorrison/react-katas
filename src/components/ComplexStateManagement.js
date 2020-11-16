@@ -17,11 +17,20 @@ const ComplexStateManagement = () => {
     ]);
   }, []);
 
+  const loopNamesInList = (state) => {
+    return state ? state.map(name => <li key={name}>{name}</li>) : null
+  }
+  
+
   return (
     <>
       <p>Here you will map over an array and display it's contents as a list</p>
       <h3>Musicians from the Northwest</h3>
-      <ul>{/* You will map using <li> here to display a list of names */}</ul>
+      <ul>{/* You will map using <li> here to display a list of names */}
+        {
+          loopNamesInList(arrayState)
+        }
+      </ul>
     </>
   );
 };

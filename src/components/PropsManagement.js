@@ -19,10 +19,10 @@ const PropsManagement = () => {
       )}
 
       {/* You will need to pass two props into this component below */}
-      <TextInput />
+      <TextInput placeholder="placeholder" setName={setName} />
 
       {/* You will also need to pass a prop into here to update your family tree */}
-      <FamilyTree />
+      <FamilyTree name={name}/>
     </>
   );
 };
